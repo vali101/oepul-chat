@@ -9,7 +9,6 @@ from llama_index.schema import Document, NodeRelationship, RelatedNodeInfo
 from llama_index.readers.file.docs_reader import DocxReader, HWPReader, PDFReader
 import pdfplumber
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -62,9 +61,9 @@ class CustomPDFReader(BaseReader):
                     Document(
                         text=text,
                         metadata={
-                            'Filename': "filename",
+                            'File Name': file.name,
                             "Content Type": "text",
-                            'header_stack': "/".join(header_stack)
+                            'Header Path': "/".join(header_stack)
                         }
                     )
                 )
@@ -75,9 +74,9 @@ class CustomPDFReader(BaseReader):
                     Document(
                         text=text,
                         metadata={
-                            'Filename': "filename",
+                            'File Name': file.name,
                             "Content Type": "text",
-                            'header_stack': "/".join(header_stack) + f"/{chapter['title']}"
+                            'Header Path': "/".join(header_stack) + f"/{chapter['title']}"
                         }
                     )
                 )
