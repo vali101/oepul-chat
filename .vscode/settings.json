@@ -1,0 +1,14 @@
+{
+    // set poetry as default python interpreter
+    "python.pythonPath": "${env:HOME}/.poetry/bin/python",
+    "python.venvPath": "${env:HOME}/.poetry/bin/python",
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "autopep8.args": [
+        "--max-line-length",
+        "100",
+        "--experimental",
+    ],
+}

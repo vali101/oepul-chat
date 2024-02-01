@@ -34,32 +34,6 @@ class CustomHTMLReader(BaseReader):
 
         return docs
 
-
-# # Function to convert HTML article element to structured dictionary
-# def html_to_dict(element):
-#     result = {}
-#     for child in element.children:
-#         if child.name is not None:
-#             if child.name in ['h1', 'h2', 'h3']:
-#                 result[child.name] = child.get_text().strip()
-#             elif child.name == 'p':
-#                 if 'text' not in result:
-#                     result['text'] = []
-#                 result['text'].append(child.get_text().strip())
-#             elif child.name in ['ul', 'ol']:
-#                 if 'lists' not in result:
-#                     result['lists'] = []
-#                 current_list = []
-#                 for li in child.find_all('li'):
-#                     current_list.append(li.get_text().strip())
-#                 result['lists'].append({child.name: current_list})
-#             elif child.name == 'div':
-#                 if 'divs' not in result:
-#                     result['divs'] = []
-#                 result['divs'].append(html_to_dict(child))
-#     return result
-
-
 # Function to convert HTML article element to a list of llama index Documents
 def html_to_llama_docs(article_soup, filename, header_path=[]):
     result = []

@@ -12,7 +12,7 @@ import pdfplumber
 logger = logging.getLogger(__name__)
 
 
-class CustomPDFReader(BaseReader):
+class CustomFullPDFReader(BaseReader):
     def load_data(
         self, file: Path, extra_info: Optional[Dict] = None
     ) -> List[Document]:
@@ -26,8 +26,7 @@ class CustomPDFReader(BaseReader):
 
         structured_pdf = self.extract_chapters(file)
         doc_title = self.extract_title(structured_pdf)
-        header_stack = [doc_title]
-        pdf_docs = []
+        pdf_content = ""
 
         chapters = structured_pdf['chapters']
         for chapter in chapters:
@@ -39,47 +38,15 @@ class CustomPDFReader(BaseReader):
             # If the index is numeric, update header stack
             if all([item.isnumeric() for item in index_list]):
                 title = " ".join(chapter['title'].split(' ')[1:]).strip()
+                pdf_content += f'## {title}\n' + text + "\n\n"
 
-                header_stack_len = len(header_stack) - 1
-                index_len = len(index_list)
-
-                # If new subheader present add it
-                if header_stack_len < index_len:
-                    header_stack.append(title)
-                # If going back in hierarchy remove elements to be shorter than index
-                elif header_stack_len > index_len:
-                    [header_stack.pop()
-                     for _ in range(header_stack_len - index_len + 1)]
-                    header_stack.append(title)
-                else:
-                    header_stack.pop()
-                    header_stack.append(title)
-
-                # Add document to list
-                pdf_docs.append(
-                    Document(
-                        text=re.sub(r'\.+', '\n', text),
-                        metadata={
-                            'File Name': file.name,
-                            "Content Type": "text",
-                            'Header Path': "/".join(header_stack)
-                        }
-                    )
-                )
-
-            # Else just link to parent element
-            else:
-                pdf_docs.append(
-                    Document(
-                        text=re.sub(r'\.+', '\n', text),
-                        metadata={
-                            'File Name': file.name,
-                            "Content Type": "text",
-                            'Header Path': "/".join(header_stack) + f"/{chapter['title']}"
-                        }
-                    )
-                )
-        return pdf_docs
+        return [Document(
+            text=pdf_content,
+            metadata={
+                'File Name': file.name,
+                "Content Type": "text",
+            }
+        )]
 
     @staticmethod
     def extract_title(structured_pdf):
