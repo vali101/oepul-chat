@@ -11,4 +11,10 @@
         "100",
         "--experimental",
     ],
+    // wrap txt files after 100 characters
+    // "editor.wordWrap": "on",
+    // "editor.wordWrapColumn": 100,
+    // "files.associations": {
+    //     "*.txt": "plaintext"
+    // },
 }

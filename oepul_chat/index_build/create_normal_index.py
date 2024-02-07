@@ -10,7 +10,7 @@ from oepul_chat.readers.custom_html_reader import CustomHTMLReader
 from oepul_chat.utils import load_data
 
 
-def create_normal_index():
+def create_normal_index(only_oepul: bool = False):
     PDFReader = download_loader("PDFReader")
 
     # load all official OEPUL docs with custom PDF reader
@@ -23,6 +23,10 @@ def create_normal_index():
     # merge documents lists
     # [oepul_official_docs, ama_official_docs, bio_austria_guide]  #
     docs_list = [oepul_official_docs, bio_austria_guide, ama_official_docs]
+
+    if only_oepul:
+        docs_list = [oepul_official_docs]
+
     documents = [doc for docs in docs_list
                  for doc in docs]
 
@@ -42,4 +46,7 @@ def create_normal_index():
 
     index = VectorStoreIndex(nodes)
 
-    index.storage_context.persist(persist_dir="indices/normal_index/")
+    if only_oepul:
+        index.storage_context.persist(persist_dir="indices/oepul_index/")
+    else:
+        index.storage_context.persist(persist_dir="indices/normal_index/")

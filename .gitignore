@@ -2,6 +2,5 @@ data
 indices
 .DS_Store
 .env
-tmp
 
 __pycache__/

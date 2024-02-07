@@ -1,0 +1,58 @@
+[
+  {
+    "query": "Unter welchen Umständen ist Anbindehaltung möglich?",
+    "header_paths": [
+      "Tierwohl – Stallhaltung Rinder/FÖRDERBEDINGUNGEN/MELDEPFLICHTEN"
+    ],
+    "expected_answer": "Anbindehaltung ist generell nicht möglich. Man kann Tiere von der Maßnahme abmelden sofern die Anforderungen der Maßnahme für einzelne oder mehrere Tiere in der jeweiligen Rinderkategorie im Förderjahr nicht einhaltbar sind. Die Abmeldung hat umgehend zu erfolgen. Gründe sind z.b. bauliche oder flächentechnische Gegebenheiten (erforderliche nutzbare Mindestmaße im bestehenden Stall nicht erreichbar), der Wechsel auf  Vollspaltensystem, eine länger als 10 Tage andauernde Separierung aufgrund Krankheit eines Tieres oder vorübergehende Anbindehaltung."
+  },
+  {
+    "query": "Ich beziehe die Maßnahme Tierwohl - Stallhaltung Rinder jedoch muss ich aktuell ein krankes Rind in Anbindehaltung halten, was muss ich beachten?",
+    "header_paths": [
+      "Tierwohl – Stallhaltung Rinder/FÖRDERBEDINGUNGEN/MELDEPFLICHTEN"
+    ],
+    "expected_answer": "Die Separierung eines kranken Rinds für länger als 10 Tage ist möglich jedoch müssen sie dies der AMA umgehend melden und muss in der Beilage „Tierwohl – Weide/Stallhaltung“ eingetragen werden. Dieses Rind kann dann im Förder Jahr nicht mehr berücksichtigt werden."
+  },
+  {
+    "query": "Wann sind die verschiedenen Umbruchzeitpunkte der Biodiversitätsflächen?",
+    "header_paths": [
+      "Umweltgerechte und biodiversitätsfördernde Bewirtschaftung/BIODIVERSITÄTSFLÄCHEN/BIODIVERSITÄTSFLÄCHEN AUF ACKERFLÄCHEN/NEUANSAAT MIT REGIONALER ACKER-SAATGUTMISCHUNG (CODE DIVRS)",
+      "Umweltgerechte und biodiversitätsfördernde Bewirtschaftung/BIODIVERSITÄTSFLÄCHEN/BIODIVERSITÄTSFLÄCHEN AUF ACKERFLÄCHEN/BEWIRTSCHAFTUNGSAUFLAGEN/ANSAAT"
+    ],
+    "expected_answer": "Ein Umbruch ist frühestens am 15. September des 2."
+  },
+  {
+    "query": "Wie lange ist die Weidedauer für Rinder?",
+    "header_paths": ["Tierwohl – Weide/FÖRDERBEDINGUNGEN/WEIDEHALTUNG"],
+    "expected_answer": "Die Weidehaltung hat an mindestens 120 Tagen im Zeitraum von 1. April bis einschließlich"
+  },
+  {
+    "query": "Was sind die unterschiedliche Anforderungen an abfrierenden und winterharte in der Maßnahme Zwischenfruchtanbau?",
+    "header_paths": [
+      "Begrünung von Ackerflächen – Zwischenfruchtanbau/FÖRDERBEDINGUNGEN/BEGRÜNUNGSVARIANTEN",
+      "Begrünung von Ackerflächen – Zwischenfruchtanbau/FÖRDERBEDINGUNGEN/BEGRÜNUNGSVARIANTEN/VARIANTE 1",
+      "Begrünung von Ackerflächen – Zwischenfruchtanbau/FÖRDERBEDINGUNGEN/BEGRÜNUNGSVARIANTEN/VARIANTE 2, 3, 4 UND 5",
+      "Begrünung von Ackerflächen – Zwischenfruchtanbau/FÖRDERBEDINGUNGEN/BEGRÜNUNGSVARIANTEN/VARIANTE 6",
+      "Begrünung von Ackerflächen – Zwischenfruchtanbau/FÖRDERBEDINGUNGEN/BEGRÜNUNGSVARIANTEN/VARIANTE 7",
+      "Begrünung von Ackerflächen – Zwischenfruchtanbau/FÖRDERBEDINGUNGEN/ANLAGE UND MISCHUNGSPARTNER"
+    ],
+    "expected_answer": "\"Es kommt darauf an welche Variante der Maßnahme gewähl wurd. Bei den Varianten 1 bis 5 und 7 dürfen Zwischenfrüchte winterhart oder abfrostend sein. Auch Mischungen aus winterharten und abfrostenden Kulturen dürfen ausgesät werden."
+  },
+  {
+    "query": "Wie lange ist die Weidedauer für Hühner?",
+    "header_paths": [],
+    "expected_answer": "Die Dokumente enthalten keine Information zu diesem Thema."
+  },
+  {
+    "query": "Was sind die unterschiedliche Anforderungen an abfrierenden und winterharte in der Maßnahme System Immergrün?",
+    "header_paths": [
+      "Begrünung von Ackerflächen – System Immergrün/FÖRDERBEDINGUNGEN/ZWISCHENFRÜCHTE/ANLAGE UND MISCHUNGSPARTNER"
+    ],
+    "expected_answer": "Bei den winterharten oder abfrierenden Früchten in der Maßnahme System Immergrün ist vor allem der Zeitraum relevant. Nach dem 20. September bis spätestens am 15. Oktober angelegte Zwischenfrüchte können auch in Reinsaat angelegt werden, müssen jedoch winterhart sein und dürfen frühestens am 15. Februar des Folgejahres umgebrochen werden. Bei diesen Kulturen muss es sich demnach ausschließlich um winterharte Kulturen handeln, unabhängig davon, ob der Anbau mit einer einzigen winterharten Kultur in Reinsaat oder in einer Mischung aus mehreren winterharten Kulturen erfolgt."
+  },
+  {
+    "query": "Wieviele Gemengepartner muß in einer winterharten Zwischenfrucht umfassen?",
+    "header_paths": [],
+    "expected_answer": "Wie viel Gemengepartner in einer winterharten Zwischenfrucht enthalten sein müssen kommt auf die gewählte Varianten an, bei Variante 2 sind es 6 Mischungspart"
+  }
+]

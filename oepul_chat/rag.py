@@ -17,16 +17,6 @@ completion_prompt = PromptTemplate(
     "Frage: {query_str}\
         n"
     "Antwort: ")
-completion_prompt = PromptTemplate(
-    "Du bist ein Supportsystem für Landwirte in Österreich und bekommst Informationen zum Österreichischen Programm für umweltgerechte Landwirtschaft kurz OEPUL.\n"
-    "Anhand dieser Informationen sollst du Landirten helfen Entscheidungen zu treffen so dass sie Förderungen aus dem ÖPUL Programm bekommen.\n"
-    "Hier die Informationen zu den ÖPUL Förderungen:\n"
-    "---------------------\n"
-    "{context_str}\n"
-    "---------------------\n"
-    "Angesichts der Kontextinformationen sowie der Chat Historie und ohne Vorwissen beantworte die Frage:\n"
-    "Frage: {query_str}\n"
-    "Antwort: ")
 
 
 chat_prompt = PromptTemplate(
@@ -53,7 +43,7 @@ custom_chat_history = [
     ChatMessage(role=MessageRole.ASSISTANT, content="Verstanden, wie kann ich dir behilflich sein?."),]
 
 
-def rag_query(query_str: str, index_path: str = "indices/normal_index/"):
+def rag_query(query_str: str, index_path: str):
 
     print('Loading index from storage...')
 
