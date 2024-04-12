@@ -5,7 +5,9 @@ from llama_index import set_global_service_context
 from llama_index import ServiceContext
 from llama_index.embeddings import OpenAIEmbedding
 from langchain_openai import OpenAI
-from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever
+from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever, summary_query
+import warnings
+warnings.filterwarnings("ignore")
 
 # Get api key from .env file
 load_dotenv()
@@ -27,11 +29,18 @@ def main():
     parser.add_argument("--build-summary-index", action="store_true", help="Create summary index")
     parser.add_argument("--build-normal-index", action="store_true", help="Create normal index")
     parser.add_argument("--build-oepul-index", action="store_true", help="Create only OEPUL index")
+    parser.add_argument("--build-oepul-base-reader-index", action="store_true",
+                        help="Create only OEPUL base reader index")
     parser.add_argument("--evaluate", action="store_true", help="Evaluate chatbot")
+    parser.add_argument("--combinations", action="store_true",
+                        help="Evaluate chatbot with different combinations")
     parser.add_argument("--build-indices", action="store_true", help="Create all indices: ")
     parser.add_argument("--query", type=str, help="Query chatbot")
+    parser.add_argument("--summary-query", type=str, help="Query summaries.")
     parser.add_argument("--chat", action="store_true", help="Chat with chatbot")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
+    parser.add_argument("--file-path", type=str, help="File path.")
+    parser.add_argument("--k", type=int, help="Number of docs retrieved. Default is 6.")
 
     args = parser.parse_args()
 
@@ -49,21 +58,39 @@ def main():
         create_normal_index(only_oepul=True)
 
     if args.build_oepul_index:
-        create_normal_index()
+        create_normal_index(only_oepul=True)
+
+    if args.build_oepul_base_reader_index:
+        create_normal_index(only_oepul=True, only_oepul_base_reader=True)
 
     if args.build_indices:
         create_summary_index()
         create_normal_index()
-        create_normal_index(only_oepul=True)
+        create_normal_index(only_oepul=True, only_oepul_base_reader=True)
 
     if args.chat:
         rag_chat(service_context=service_context)
 
     if args.evaluate:
-        evaluate_retriever()
+        if args.combinations:
+            evaluate_retriever(combinations=True)
+        elif args.file_path and args.k:
+            evaluate_retriever(args.file_path, args.k)
+        elif args.file_path:
+            evaluate_retriever(args.file_path)
+        elif args.k:
+            evaluate_retriever(k=args.k)
+        else:
+            evaluate_retriever()
 
     if args.query:
-        print(rag_query(args.query, "indices/oepul_index/"))
+        if args.k:
+            rag_query(args.query, "indices/oepul_index/", args.k)
+        else:
+            rag_query(args.query, "indices/oepul_index/")
+
+    if args.summary_query:
+        summary_query(args.summary_query)
 
 
 if __name__ == "__main__":

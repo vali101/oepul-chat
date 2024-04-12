@@ -54,5 +54,19 @@
     "query": "Wieviele Gemengepartner muß in einer winterharten Zwischenfrucht umfassen?",
     "header_paths": [],
     "expected_answer": "Wie viel Gemengepartner in einer winterharten Zwischenfrucht enthalten sein müssen kommt auf die gewählte Varianten an, bei Variante 2 sind es 6 Mischungspart"
+  },
+  {
+    "query": "Ich will die Maßnahme System Immergün beziehen darf ich das Feld häckseln?",
+    "header_paths": [
+      "Begrünung von Ackerflächen – System Immergrün/FÖRDERBEDINGUNGEN/ZWISCHENFRÜCHTE/BODENBEARBEITUNG"
+    ],
+    "expected_answer": "Während des Begrünungszeitraums ist ein dem Pflanzenbestand angepasstes Häckseln (Zeitpunkt, Höhe über dem Boden) möglich, wenn ein erneutes Nachwachsen der Pflanzen zu erwarten ist und weiter sowohl eine Erosionsschutzwirkung (Wurzel und gehäckseltes Pflanzmaterial) als auch eine Wirkung betreffend Nitratrückhalt (Wurzel und nachwachsende Pflanze) gegeben sind. Weiters muss eine flächendeckende Begrünung erhalten bleiben oder sich wieder entwickeln."
+  },
+  {
+    "query": "Nehmen wir an ich will die Maßnahme System Immergrün beziehen und kann zwischen der Ernte der Haupfrucht und der Anlage Zwischenfrucht 40 Tage lang nix anbauen kann ich die Maßnahme dann beziehen?",
+    "header_paths": [
+      "Begrünung von Ackerflächen – System Immergrün/FÖRDERBEDINGUNGEN/GANZJÄHRIGE BEGRÜNUNG"
+    ],
+    "expected_answer": "Nein da die Maximaldauer zwischen der Ernte der Hauptfrucht und der Anlage der Zwischenfrucht 30 Tage beträgt."
   }
 ]

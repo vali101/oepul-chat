@@ -10,10 +10,9 @@ from oepul_chat.readers.custom_html_reader import CustomHTMLReader
 from oepul_chat.utils import load_data
 
 
-def create_normal_index(only_oepul: bool = False):
+def create_normal_index(only_oepul: bool = False, only_oepul_base_reader=False):
     PDFReader = download_loader("PDFReader")
 
-    # load all official OEPUL docs with custom PDF reader
     oepul_official_docs = load_data("data/OEPUL_PDF/", ".pdf", CustomPDFReader())
     # # load html guide from BIO Austria
     bio_austria_guide = load_data("data/BIO_AUSTRIA", ".html", CustomHTMLReader())
@@ -44,9 +43,14 @@ def create_normal_index(only_oepul: bool = False):
         node.excluded_llm_metadata_keys = ["Content Type", "page_label"]
         node.excluded_embed_metadata_keys = ["Content Type"]
 
+        if only_oepul_base_reader:
+            node.excluded_embed_metadata_keys = ["Content Type", "Header Path"]
+
     index = VectorStoreIndex(nodes)
 
-    if only_oepul:
+    if only_oepul_base_reader and only_oepul:
+        index.storage_context.persist(persist_dir="indices/oepul_index_base_reader/")
+    elif only_oepul:
         index.storage_context.persist(persist_dir="indices/oepul_index/")
     else:
         index.storage_context.persist(persist_dir="indices/normal_index/")
