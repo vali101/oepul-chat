@@ -17,6 +17,8 @@ To run the project, follow these steps:
 
 ## Usage
 
+To use the system run `poetry run python main.py` with one of the following arguments:
+
 ### Download Data
 - `--download`: Download necessary data for the chatbot.
 
@@ -50,3 +52,9 @@ To run the project, follow these steps:
 - To engage in a chat session: `python program.py --chat`
 - To query the chatbot: `python program.py --query "How to improve crop yield?"`
 - To evaluate the chatbot: `python program.py --evaluate`
+
+## Repo Structure
+
+### oepul_chat 
+
+The main functionality of this repo is in the oepul_chat folder

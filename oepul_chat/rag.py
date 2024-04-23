@@ -24,8 +24,7 @@ completion_prompt = PromptTemplate(
     "{context_str}\n"
     "---------------------\n"
     "Angesichts der Kontextinformationen und ohne Vorwissen beantworte die Frage:\n"
-    "Frage: {query_str}\
-        n"
+    "Frage: {query_str}\n"
     "Antwort: ")
 
 
@@ -100,7 +99,7 @@ def rag_chat(service_context, index_path: str = "indices/normal_index/"):
 def summary_query(query_str: str):
 
     # load summaries txt
-    with open('data/summaries.txt', 'r') as f:
+    with open('data/ .txt', 'r') as f:
         summaries = f.read()
 
     print(f'\nFrage:\n{query_str}\n')

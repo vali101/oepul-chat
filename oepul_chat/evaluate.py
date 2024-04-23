@@ -19,7 +19,7 @@ def evaluate_retriever(index_path: str = 'indices/oepul_index/', k=6, combinatio
     with open('tmp/eval_set_new.json', 'r', encoding='utf-8') as f:
         eval_set = json.load(f)
 
-    top_ks = [2, 4, 6, 8, 10, 12]
+    top_ks = [2, 4, 6, 8, 10]
     index_paths = ['indices/oepul_index/', 'indices/oepul_index_base_reader/']
 
     rows = []
