@@ -1,0 +1,100 @@
+[
+    {
+        "query": "Unter welchen Umst\u00e4nden ist Anbindehaltung m\u00f6glich?",
+        "header_paths": [
+            "Tierwohl \u2013 Stallhaltung Rinder/F\u00d6RDERBEDINGUNGEN/MELDEPFLICHTEN"
+        ],
+        "expected_answer": "Anbindehaltung ist generell nicht m\u00f6glich. Man kann Tiere von der Ma\u00dfnahme abmelden sofern die Anforderungen der Ma\u00dfnahme f\u00fcr einzelne oder mehrere Tiere in der jeweiligen Rinderkategorie im F\u00f6rderjahr nicht einhaltbar sind. Die Abmeldung hat umgehend zu erfolgen. Gr\u00fcnde sind z.b. bauliche oder fl\u00e4chentechnische Gegebenheiten (erforderliche nutzbare Mindestma\u00dfe im bestehenden Stall nicht erreichbar), der Wechsel auf  Vollspaltensystem, eine l\u00e4nger als 10 Tage andauernde Separierung aufgrund Krankheit eines Tieres oder vor\u00fcbergehende Anbindehaltung.",
+        "response": "Anbindehaltung ist nur unter der Bedingung erlaubt, dass es aus arbeitswirtschaftlichen oder tiergesundheitlichen Gr\u00fcnden erforderlich ist."
+    },
+    {
+        "query": "Ich beziehe die Ma\u00dfnahme Tierwohl - Stallhaltung Rinder jedoch muss ich aktuell ein krankes Rind in Anbindehaltung halten, was muss ich beachten?",
+        "header_paths": [
+            "Tierwohl \u2013 Stallhaltung Rinder/F\u00d6RDERBEDINGUNGEN/MELDEPFLICHTEN"
+        ],
+        "expected_answer": "Die Separierung eines kranken Rinds f\u00fcr l\u00e4nger als 10 Tage ist m\u00f6glich jedoch m\u00fcssen sie dies der AMA umgehend melden und muss in der Beilage \u201eTierwohl \u2013 Weide/Stallhaltung\u201c eingetragen werden. Dieses Rind kann dann im F\u00f6rder Jahr nicht mehr ber\u00fccksichtigt werden.",
+        "response": "Die Einzeltierhaltung von erkrankten oder verletzten Tieren in Anbindehaltung ist nur f\u00fcr maximal 10 Tage gestattet, sofern die Notwendigkeit daf\u00fcr aus gesundheitlichen Gr\u00fcnden besteht. Es ist wichtig, dass die Einzeltierhaltung auf eingestreuten Systemen erfolgt und die Krankheit bzw. Verletzung sowie die Dauer der Einzeltierhaltung am Betrieb dokumentiert werden. Diese Aufzeichnungen m\u00fcssen aufbewahrt werden und k\u00f6nnen im Rahmen von Vor-Ort-Kontrollen \u00fcberpr\u00fcft werden. Es ist keine gesonderte Meldung \u00fcber die Einzeltierhaltung von maximal 10 Tagen an die zust\u00e4ndige Stelle erforderlich."
+    },
+    {
+        "query": "Wann sind die verschiedenen Umbruchzeitpunkte der Biodiversit\u00e4tsfl\u00e4chen?",
+        "header_paths": [
+            "Umweltgerechte und biodiversit\u00e4tsf\u00f6rdernde Bewirtschaftung/BIODIVERSIT\u00c4TSFL\u00c4CHEN/BIODIVERSIT\u00c4TSFL\u00c4CHEN AUF ACKERFL\u00c4CHEN/NEUANSAAT MIT REGIONALER ACKER-SAATGUTMISCHUNG (CODE DIVRS)",
+            "Umweltgerechte und biodiversit\u00e4tsf\u00f6rdernde Bewirtschaftung/BIODIVERSIT\u00c4TSFL\u00c4CHEN/BIODIVERSIT\u00c4TSFL\u00c4CHEN AUF ACKERFL\u00c4CHEN/BEWIRTSCHAFTUNGSAUFLAGEN/ANSAAT"
+        ],
+        "expected_answer": "Ein Umbruch ist fr\u00fchestens am 15. September des 2.",
+        "response": "Ein Umbruch der Biodiversit\u00e4tsfl\u00e4chen ist fr\u00fchestens am 15. September des zweiten Jahres erlaubt. Im Falle des Anbaus einer Winterung oder Zwischenfrucht ist der Umbruch bereits nach dem 31. Juli des zweiten Jahres m\u00f6glich."
+    },
+    {
+        "query": "Wie lange ist die Weidedauer f\u00fcr Rinder?",
+        "header_paths": [
+            "Tierwohl \u2013 Weide/F\u00d6RDERBEDINGUNGEN/WEIDEHALTUNG"
+        ],
+        "expected_answer": "Die Weidehaltung hat an mindestens 120 Tagen im Zeitraum von 1. April bis einschlie\u00dflich",
+        "response": "Die Weidedauer f\u00fcr Rinder betr\u00e4gt mindestens 120 Tage im Zeitraum vom 1. April bis einschlie\u00dflich 31. Oktober."
+    },
+    {
+        "query": "Was sind die unterschiedliche Anforderungen an abfrierenden und winterharte in der Ma\u00dfnahme Zwischenfruchtanbau?",
+        "header_paths": [
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 Zwischenfruchtanbau/F\u00d6RDERBEDINGUNGEN/BEGR\u00dcNUNGSVARIANTEN",
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 Zwischenfruchtanbau/F\u00d6RDERBEDINGUNGEN/BEGR\u00dcNUNGSVARIANTEN/VARIANTE 1",
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 Zwischenfruchtanbau/F\u00d6RDERBEDINGUNGEN/BEGR\u00dcNUNGSVARIANTEN/VARIANTE 2, 3, 4 UND 5",
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 Zwischenfruchtanbau/F\u00d6RDERBEDINGUNGEN/BEGR\u00dcNUNGSVARIANTEN/VARIANTE 6",
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 Zwischenfruchtanbau/F\u00d6RDERBEDINGUNGEN/BEGR\u00dcNUNGSVARIANTEN/VARIANTE 7",
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 Zwischenfruchtanbau/F\u00d6RDERBEDINGUNGEN/ANLAGE UND MISCHUNGSPARTNER"
+        ],
+        "expected_answer": "\"Es kommt darauf an welche Variante der Ma\u00dfnahme gew\u00e4hl wurd. Bei den Varianten 1 bis 5 und 7 d\u00fcrfen Zwischenfr\u00fcchte winterhart oder abfrostend sein. Auch Mischungen aus winterharten und abfrostenden Kulturen d\u00fcrfen ausges\u00e4t werden.",
+        "response": "Die Anforderungen an abfrierende und winterharte Arten in der Ma\u00dfnahme Zwischenfruchtanbau sind, dass die Mischungen sowohl aus abfrierenden als auch winterharten Arten bestehen d\u00fcrfen. Winterharte Zwischenfr\u00fcchte k\u00f6nnen in den Varianten 1 bis 5 und 7 verwendet werden, w\u00e4hrend f\u00fcr die Variante 6 nur bestimmte winterharte Zwischenfr\u00fcchte zul\u00e4ssig sind. Es ist auch erlaubt, Mischungen aus winterharten und abfrierenden Kulturen auszus\u00e4en."
+    },
+    {
+        "query": "Wie lange ist die Weidedauer f\u00fcr H\u00fchner?",
+        "header_paths": [],
+        "expected_answer": "Die Dokumente enthalten keine Information zu diesem Thema.",
+        "response": "Die Weidedauer f\u00fcr H\u00fchner betr\u00e4gt mindestens 120 Tage im Zeitraum von 1. April bis einschlie\u00dflich 31. Oktober."
+    },
+    {
+        "query": "Was sind die unterschiedliche Anforderungen an abfrierenden und winterharte in der Ma\u00dfnahme System Immergr\u00fcn?",
+        "header_paths": [
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 System Immergr\u00fcn/F\u00d6RDERBEDINGUNGEN/ZWISCHENFR\u00dcCHTE/ANLAGE UND MISCHUNGSPARTNER"
+        ],
+        "expected_answer": "Bei den winterharten oder abfrierenden Fr\u00fcchten in der Ma\u00dfnahme System Immergr\u00fcn ist vor allem der Zeitraum relevant. Nach dem 20. September bis sp\u00e4testens am 15. Oktober angelegte Zwischenfr\u00fcchte k\u00f6nnen auch in Reinsaat angelegt werden, m\u00fcssen jedoch winterhart sein und d\u00fcrfen fr\u00fchestens am 15. Februar des Folgejahres umgebrochen werden. Bei diesen Kulturen muss es sich demnach ausschlie\u00dflich um winterharte Kulturen handeln, unabh\u00e4ngig davon, ob der Anbau mit einer einzigen winterharten Kultur in Reinsaat oder in einer Mischung aus mehreren winterharten Kulturen erfolgt.",
+        "response": "Abfrierende Zwischenfr\u00fcchte d\u00fcrfen nach dem 31. Oktober des jeweiligen Jahres geh\u00e4ckselt, gem\u00e4ht ohne Abtransport und gewalzt werden. Winterharte Zwischenfr\u00fcchte m\u00fcssen \u00fcber den Winter bestehen bleiben und d\u00fcrfen erst nach dem 31. Oktober des jeweiligen Jahres geh\u00e4ckselt, gem\u00e4ht ohne Abtransport und gewalzt werden."
+    },
+    {
+        "query": "Wieviele Gemengepartner mu\u00df in einer winterharten Zwischenfrucht umfassen?",
+        "header_paths": [],
+        "expected_answer": "Wie viel Gemengepartner in einer winterharten Zwischenfrucht enthalten sein m\u00fcssen kommt auf die gew\u00e4hlte Varianten an, bei Variante 2 sind es 6 Mischungspart",
+        "response": "Eine winterharte Zwischenfrucht muss mindestens 3 Mischungspartner aus 2 Pflanzenfamilien umfassen."
+    },
+    {
+        "query": "Ich will die Ma\u00dfnahme System Immerg\u00fcn beziehen darf ich das Feld h\u00e4ckseln?",
+        "header_paths": [
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 System Immergr\u00fcn/F\u00d6RDERBEDINGUNGEN/ZWISCHENFR\u00dcCHTE/BODENBEARBEITUNG"
+        ],
+        "expected_answer": "W\u00e4hrend des Begr\u00fcnungszeitraums ist ein dem Pflanzenbestand angepasstes H\u00e4ckseln (Zeitpunkt, H\u00f6he \u00fcber dem Boden) m\u00f6glich, wenn ein erneutes Nachwachsen der Pflanzen zu erwarten ist und weiter sowohl eine Erosionsschutzwirkung (Wurzel und geh\u00e4ckseltes Pflanzmaterial) als auch eine Wirkung betreffend Nitratr\u00fcckhalt (Wurzel und nachwachsende Pflanze) gegeben sind. Weiters muss eine fl\u00e4chendeckende Begr\u00fcnung erhalten bleiben oder sich wieder entwickeln.",
+        "response": "During the greening period of catch crops, a tailored shredding (timing, height above ground) is allowed if regrowth of the plants is expected, and if erosion protection (roots and shredded plant material) as well as nitrate retention effects (roots and regrowing plants) are maintained. It is important to ensure that a comprehensive greening is preserved or redeveloped. However, any soil cultivation that leads to plant death is not permitted during this period."
+    },
+    {
+        "query": "Nehmen wir an ich will die Ma\u00dfnahme System Immergr\u00fcn beziehen und kann zwischen der Ernte der Haupfrucht und der Anlage Zwischenfrucht 40 Tage lang nix anbauen kann ich die Ma\u00dfnahme dann beziehen?",
+        "header_paths": [
+            "Begr\u00fcnung von Ackerfl\u00e4chen \u2013 System Immergr\u00fcn/F\u00d6RDERBEDINGUNGEN/GANZJ\u00c4HRIGE BEGR\u00dcNUNG"
+        ],
+        "expected_answer": "Nein da die Maximaldauer zwischen der Ernte der Hauptfrucht und der Anlage der Zwischenfrucht 30 Tage betr\u00e4gt.",
+        "response": "Nein, in diesem Fall k\u00f6nnten Sie die Ma\u00dfnahme \"System Immergr\u00fcn\" nicht beziehen, da die Bedingung besagt, dass zwischen der Ernte der Hauptfrucht und der Anlage der Zwischenfrucht maximal 30 Tage liegen d\u00fcrfen, um die Ma\u00dfnahme zu erf\u00fcllen."
+    },
+    {
+        "query": "Aus was darf G\u00fclle bestehen dass sie als D\u00fcnger f\u00f6rderf\u00e4hig ist?",
+        "header_paths": [
+            "Bodennahe Ausbringung fl\u00fcssiger Wirtschaftsd\u00fcnger und/DEFINITIONEN/WIRTSCHAFTSD\u00dcNGER"
+        ],
+        "expected_answer": "G\u00fclle ist ein Gemisch aus Kot und Harn, das dar\u00fcber hinaus Wasser, Futterreste und  Einstreuteile enthalten kann. Regenwasser, das in die G\u00fcllegrube eingeleitet wird, ist  nicht f\u00f6rderbar. Ein unvermeidlicher Anteil an Stallwaschwasser bzw. ein geringer  Anteil an Regenwasser ist jedoch zul\u00e4ssig und f\u00f6rderbar. Ebenso ist ein Anteil an  Wasser, der eine sch\u00e4digende Wirkung auf die ausgebrachte Kultur verhindern soll (kein Stickstoff-\u00dcberschuss \u2013 verbrennen), zul\u00e4ssig und daher in Verbindung mit dem ausgebrachten Wirtschaftsd\u00fcnger f\u00f6rderbar.",
+        "response": "G\u00fclle kann f\u00f6rderf\u00e4higer D\u00fcnger sein, wenn sie ein Gemisch aus Kot und Harn ist und zus\u00e4tzlich Wasser, Futterreste und Einstreuteile enthalten kann. Regenwasser, das in die G\u00fcllegrube eingeleitet wird, ist jedoch nicht f\u00f6rderbar. Ein unvermeidlicher Anteil an Stallwaschwasser oder ein geringer Anteil an Regenwasser ist zul\u00e4ssig und f\u00f6rderbar. Ebenso ist ein Anteil an Wasser, der eine sch\u00e4digende Wirkung auf die ausgebrachte Kultur verhindern soll, f\u00f6rderbar."
+    },
+    {
+        "query": "Wie muss ich Fl\u00fcssd\u00fcnger ausbringen damit er f\u00f6rderf\u00e4hig ist?",
+        "header_paths": [
+            "Bodennahe Ausbringung fl\u00fcssiger Wirtschaftsd\u00fcnger und/F\u00d6RDERBEDINGUNGEN/BODENNAHE AUSBRINGUNG/AUSBRINGUNGSVERFAHREN"
+        ],
+        "expected_answer": "Die Ausbringung von fl\u00fcssigen Wirtschaftsd\u00fcngern einschlie\u00dflich Biogasg\u00fclle hat auf  Acker- oder Gr\u00fcnlandfl\u00e4chen des Betriebes mit Ger\u00e4ten, die den D\u00fcnger unmittelbar auf  oder in den Boden ablegen, zu erfolgen. Folgende Ausbringungstechniken sind f\u00f6rderbar: Schleppschlauch: Bodennahe Ablage durch lose, flexible Schl\u00e4uche ohne  Anpressdruck  \u2022 Schleppschuh: Bodennahe Ablage durch ein Ablageschar mit Anpressdruck, welcher  die G\u00fclle direkt auf die infiltrationsf\u00e4hige Bodenoberfl\u00e4che ablegt  \u2022 Injektionsverfahren: Ablage direkt in den Boden mittels vorheriger \u00d6ffnung des Bodens  durch Werkzeuge wie Zinken oder Scheiben in einem Arbeitsschritt mit der  Ausbringung (z.B. Schlitzger\u00e4te, Scheibenegge und G\u00fcllegrubber) Die Ausbringung von fl\u00fcssigem Wirtschaftsd\u00fcnger und Biogasg\u00fclle mittels eines  Schwenkverteilers kann nicht anerkannt werden. Ebenso ist die Ausbringung mittels eines  auf einem D\u00fcsenbalken befestigten Pralltellers in der Ma\u00dfnahme nicht zul\u00e4ssig.",
+        "response": "Fl\u00fcssiger Wirtschaftsd\u00fcnger muss mit Ger\u00e4ten ausgebracht werden, die den D\u00fcnger unmittelbar auf oder in den Boden ablegen. F\u00f6rderf\u00e4hige Ausbringungstechniken sind Schleppschlauch, Schleppschuh und Injektionsverfahren. Nicht f\u00f6rderf\u00e4hig sind die Ausbringung mittels Schwenkverteiler oder Pralltellers auf einem D\u00fcsenbalken."
+    }
+]

@@ -99,7 +99,7 @@ def rag_chat(service_context, index_path: str = "indices/normal_index/"):
 def summary_query(query_str: str):
 
     # load summaries txt
-    with open('data/ .txt', 'r') as f:
+    with open('results/summaries.txt', 'r') as f:
         summaries = f.read()
 
     print(f'\nFrage:\n{query_str}\n')

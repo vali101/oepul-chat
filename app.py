@@ -1,11 +1,10 @@
 import argparse
 import logging
 from dotenv import load_dotenv
-from llama_index import set_global_service_context
 from llama_index import ServiceContext
 from llama_index.embeddings import OpenAIEmbedding
 from langchain_openai import OpenAI
-from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever, summary_query
+from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever, summary_query, generate_responses
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -15,6 +14,8 @@ load_dotenv()
 # Set openai as global service context
 # llm = OpenAI(model="gpt-3.5-turbo-1106", temperature=0, max_tokens=256)
 embed_model = OpenAIEmbedding()
+
+# local embed model
 service_context = ServiceContext.from_defaults(
     # llm=llm,
     embed_model=embed_model,
@@ -25,13 +26,14 @@ service_context = ServiceContext.from_defaults(
 
 def main():
     parser = argparse.ArgumentParser(description="Chat with OEPUL chatbot")
-    parser.add_argument("--download", action="store_true", help="Download data")
+    parser.add_argument("--download", action="store_true",
+                        help="Download data necessary for the project.")
     parser.add_argument("--build-summary-index", action="store_true", help="Create summary index")
     parser.add_argument("--build-normal-index", action="store_true", help="Create normal index")
-    parser.add_argument("--build-oepul-index", action="store_true", help="Create only OEPUL index")
     parser.add_argument("--build-oepul-base-reader-index", action="store_true",
                         help="Create only OEPUL base reader index")
-    parser.add_argument("--evaluate", action="store_true", help="Evaluate chatbot")
+    parser.add_argument("--evaluate_retriever", action="store_true", help="Evaluate retriever")
+    parser.add_argument("--generate_responses", action="store_true", help="Evaluate response")
     parser.add_argument("--combinations", action="store_true",
                         help="Evaluate chatbot with different combinations")
     parser.add_argument("--build-indices", action="store_true", help="Create all indices: ")
@@ -57,21 +59,18 @@ def main():
     if args.build_normal_index:
         create_normal_index(only_oepul=True)
 
-    if args.build_oepul_index:
-        create_normal_index(only_oepul=True)
-
     if args.build_oepul_base_reader_index:
         create_normal_index(only_oepul=True, only_oepul_base_reader=True)
 
     if args.build_indices:
         create_summary_index()
-        create_normal_index()
+        create_normal_index(only_oepul=True)
         create_normal_index(only_oepul=True, only_oepul_base_reader=True)
 
     if args.chat:
         rag_chat(service_context=service_context)
 
-    if args.evaluate:
+    if args.evaluate_retriever:
         if args.combinations:
             evaluate_retriever(combinations=True)
         elif args.file_path and args.k:
@@ -82,6 +81,9 @@ def main():
             evaluate_retriever(k=args.k)
         else:
             evaluate_retriever()
+
+    if args.generate_responses:
+        generate_responses()
 
     if args.query:
         if args.k:

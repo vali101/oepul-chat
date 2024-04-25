@@ -24,13 +24,12 @@ To use the system run `poetry run python main.py` with one of the following argu
 
 ### Building Indices
 - `--build-summary-index`: Create a summary index.
-- `--build-normal-index`: Create a normal index.
-- `--build-oepul-index`: Create only the OEPUL index.
+- `--build-normal-index`: Create a normal index with only OEPUL documents. 
 - `--build-oepul-base-reader-index`: Create only the OEPUL base reader index.
 - `--build-indices`: Create all indices.
 
 ### Evaluation
-- `--evaluate`: Evaluate the chatbot's performance.
+- `--evaluate-retriever`: Evaluate the chatbot's performance.
   - `--combinations`: Evaluate the chatbot with different combinations.
   - `--file-path [path]`: Specify the file path for evaluation.
   - `--k [number]`: Specify the number of documents retrieved.

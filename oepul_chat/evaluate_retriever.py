@@ -16,7 +16,7 @@ def evaluate_retriever(index_path: str = 'indices/oepul_index/', k=6, combinatio
     print(f'Evaluate Retriever from index: {index_path}')
 
     # open eval set
-    with open('tmp/eval_set_new.json', 'r', encoding='utf-8') as f:
+    with open('data/eval_set_new.json', 'r', encoding='utf-8') as f:
         eval_set = json.load(f)
 
     top_ks = [2, 4, 6, 8, 10]
