@@ -4,22 +4,12 @@ from dotenv import load_dotenv
 from llama_index import ServiceContext
 from llama_index.embeddings import OpenAIEmbedding
 from langchain_openai import OpenAI
-from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever, summary_query, generate_responses
+from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever, summary_query, generate_responses, evaluate_responses
 import warnings
 warnings.filterwarnings("ignore")
 
 # Get api key from .env file
 load_dotenv()
-
-# Set openai as global service context
-# llm = OpenAI(model="gpt-3.5-turbo-1106", temperature=0, max_tokens=256)
-embed_model = OpenAIEmbedding()
-
-# local embed model
-service_context = ServiceContext.from_defaults(
-    # llm=llm,
-    embed_model=embed_model,
-)
 
 # set_global_service_context(service_context)
 
@@ -34,6 +24,7 @@ def main():
                         help="Create only OEPUL base reader index")
     parser.add_argument("--evaluate_retriever", action="store_true", help="Evaluate retriever")
     parser.add_argument("--generate_responses", action="store_true", help="Evaluate response")
+    parser.add_argument("--evaluate_responses", action="store_true", help="Evaluate response")
     parser.add_argument("--combinations", action="store_true",
                         help="Evaluate chatbot with different combinations")
     parser.add_argument("--build-indices", action="store_true", help="Create all indices: ")
@@ -84,6 +75,9 @@ def main():
 
     if args.generate_responses:
         generate_responses()
+
+    if args.evaluate_responses:
+        evaluate_responses()
 
     if args.query:
         if args.k:

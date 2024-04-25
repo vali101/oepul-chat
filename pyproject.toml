@@ -13,7 +13,7 @@ langchain-openai = "^0.0.5"
 pdfplumber = "^0.10.3"
 selenium = "^4.17.2"
 python-dotenv = "^1.0.1"
-llama-index = "0.9.39"
+llama-index = "^0.10.31"
 
 [tool.poetry.group.dev.dependencies]
 autopep8 = "^2.0.4"

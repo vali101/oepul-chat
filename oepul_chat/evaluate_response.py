@@ -1,6 +1,7 @@
 from .rag import rag_query
 
 import json
+from llama_index.core.evaluation import CorrectnessEvaluator
 from llama_index.prompts import (
     BasePromptTemplate,
     ChatMessage,
@@ -8,6 +9,8 @@ from llama_index.prompts import (
     MessageRole,
     PromptTemplate,
 )
+
+from llama_index.llms.openai import OpenAI
 
 
 def generate_responses():
@@ -37,11 +40,11 @@ def generate_responses():
 
 
 def evaluate_responses():
-    responses = generate_responses()
+    # responses = generate_responses()
 
-    with open('tmp/eval_set_with_answers.json', 'r', encoding='utf-8') as f:
-        responses = json.load(f)
+    llm = OpenAI("gpt-4")
 
-    
+    evaluator = CorrectnessEvaluator(llm=llm)
 
-    
+
+print(OpenAI().complete("Paul Graham is "))
