@@ -35,8 +35,6 @@ Beispielantwort:
 4.0
 Die generierte Antwort hat genau dieselben Metriken wie die Referenzantwort, \
     aber sie ist nicht so prägnant.
-
-Übersetzt mit DeepL.com (kostenlose Version)
 """
 
 DEFAULT_USER_TEMPLATE = """
