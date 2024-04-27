@@ -1,10 +1,6 @@
-from llama_index import (
-    PromptTemplate,
-    StorageContext,
-    load_index_from_storage,
-)
+from llama_index.core import PromptTemplate, StorageContext, load_index_from_storage
 from langchain_openai import OpenAI
-from llama_index.llms import ChatMessage, MessageRole
+from llama_index.core.llms import ChatMessage, MessageRole
 
 completion_prompt = PromptTemplate(
     "Du bist ein Supportsystem für Landwirte in Österreich und bekommst Informationen zum Österreichischen Programm für umweltgerechte Landwirtschaft kurz OEPUL.\n"

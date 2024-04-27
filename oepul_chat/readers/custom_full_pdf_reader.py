@@ -3,10 +3,11 @@ import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, cast
 
-from llama_index import SimpleDirectoryReader
-from llama_index.readers.base import BaseReader
-from llama_index.schema import Document, NodeRelationship, RelatedNodeInfo
-from llama_index.readers.file.docs_reader import DocxReader, HWPReader, PDFReader
+from llama_index.core import SimpleDirectoryReader
+from llama_index.core.readers.base import BaseReader
+from llama_index.core import Document
+from llama_index.core.schema import NodeRelationship, RelatedNodeInfo
+from llama_index.readers.file import DocxReader, HWPReader, PDFReader
 import pdfplumber
 
 logger = logging.getLogger(__name__)

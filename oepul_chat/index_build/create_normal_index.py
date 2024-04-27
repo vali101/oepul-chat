@@ -1,17 +1,14 @@
 from langchain_openai import OpenAI
-from llama_index.node_parser import SentenceSplitter
-from llama_index import (
-    download_loader,
-    VectorStoreIndex,
-)
+from llama_index.core.node_parser import SentenceSplitter
+from llama_index.core import download_loader, VectorStoreIndex
 
 from oepul_chat.readers.custom_pdf_reader import CustomPDFReader
 from oepul_chat.readers.custom_html_reader import CustomHTMLReader
 from oepul_chat.utils import load_data
+from llama_index.readers.file import PDFReader
 
 
 def create_normal_index(only_oepul: bool = False, only_oepul_base_reader=False):
-    PDFReader = download_loader("PDFReader")
 
     oepul_official_docs = load_data("data/OEPUL_PDF/", ".pdf", CustomPDFReader())
     # # load html guide from BIO Austria

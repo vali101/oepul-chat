@@ -1,8 +1,6 @@
 import argparse
 import logging
 from dotenv import load_dotenv
-from llama_index import ServiceContext
-from llama_index.embeddings import OpenAIEmbedding
 from langchain_openai import OpenAI
 from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever, summary_query, generate_responses, evaluate_responses
 import warnings

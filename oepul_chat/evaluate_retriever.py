@@ -1,6 +1,6 @@
 from .query_engine import load_index
 from .utils import get_header_path_mappings, get_ids_of_header_path
-from llama_index.evaluation import RetrieverEvaluator
+from llama_index.core.evaluation import RetrieverEvaluator
 import json
 import pandas as pd
 

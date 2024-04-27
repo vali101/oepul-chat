@@ -1,11 +1,5 @@
 from langchain_openai import OpenAI
-from llama_index import (
-    ServiceContext,
-    download_loader,
-    PromptTemplate,
-    DocumentSummaryIndex,
-    get_response_synthesizer
-)
+from llama_index.core import ServiceContext, download_loader, PromptTemplate, DocumentSummaryIndex, get_response_synthesizer
 
 from oepul_chat.readers.custom_full_pdf_reader import CustomFullPDFReader
 from oepul_chat.utils import load_data

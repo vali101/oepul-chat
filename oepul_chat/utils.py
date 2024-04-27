@@ -1,4 +1,4 @@
-from llama_index import SimpleDirectoryReader
+from llama_index.core import SimpleDirectoryReader
 
 
 def get_ids_of_header_path(header_path, header_path_mappings):

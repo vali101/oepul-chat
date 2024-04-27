@@ -1,11 +1,7 @@
-from llama_index import (
-    PromptTemplate,
-    StorageContext,
-    load_index_from_storage,
-)
+from llama_index.core import PromptTemplate, StorageContext, load_index_from_storage
 from langchain_openai import OpenAI
 from langchain.chains import LLMChain
-from llama_index.llms import ChatMessage, MessageRole
+from llama_index.core.llms import ChatMessage, MessageRole
 
 from langchain.prompts.chat import (
     ChatPromptTemplate,

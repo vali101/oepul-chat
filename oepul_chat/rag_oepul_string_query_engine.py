@@ -1,11 +1,9 @@
-from llama_index.llms import OpenAI
-from llama_index.prompts import PromptTemplate
-from llama_index.query_engine import CustomQueryEngine
-from llama_index.retrievers import BaseRetriever
-from llama_index.response_synthesizers import (
-    get_response_synthesizer,
-    BaseSynthesizer,
-)
+from llama_index.llms.openai import OpenAI
+from llama_index.core import PromptTemplate
+from llama_index.core.query_engine import CustomQueryEngine
+from llama_index.core.retrievers import BaseRetriever
+from llama_index.core import get_response_synthesizer
+from llama_index.core.response_synthesizers import BaseSynthesizer
 
 qa_prompt = PromptTemplate(
     "Du bist ein Supportsystem für Landwirte in Österreich und bekommst Informationen zum Österreichischen Programm für umweltgerechte Landwirtschaft kurz OEPUL.\n"
