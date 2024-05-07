@@ -76,7 +76,7 @@ def generate_responses():
             'response': str(response)
         })
 
-    with open('tmp/eval_set_with_answers.json', 'w', encoding='utf-8') as f:
+    with open('results/eval_set_with_answers.json', 'w', encoding='utf-8') as f:
         json.dump(eval_set_with_answers, f, indent=4)
 
     return eval_set_with_answers
@@ -84,7 +84,7 @@ def generate_responses():
 
 def evaluate_responses():
 
-    with open('tmp/eval_set_with_answers.json', 'r', encoding='utf-8') as f:
+    with open('results/eval_set_with_answers.json', 'r', encoding='utf-8') as f:
         eval_set = json.load(f)
 
     ele = eval_set[0]
@@ -119,5 +119,5 @@ def evaluate_responses():
 
         results.append(result)
 
-    with open('tmp/eval_results.json', 'w', encoding='utf-8') as f:
+    with open('results/eval_results.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4)

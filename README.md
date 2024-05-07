@@ -47,10 +47,10 @@ To use the system run `poetry run python main.py` with one of the following argu
 
 ## Example Usages
 - To download data: `python program.py --download`
-- To build a summary index: `python program.py --build-summary-index`
-- To engage in a chat session: `python program.py --chat`
-- To query the chatbot: `python program.py --query "How to improve crop yield?"`
-- To evaluate the chatbot: `python program.py --evaluate`
+- To build indices: `poetry run python app.py --build-indices`
+- To engage in a chat session: `poetry run python app.py --chat`
+- To query the chatbot: `poetry run python app.py --query "Unter welchen Umständen ist Anbindehaltung möglich?"`
+- To evaluate the chatbot: `poetry run python app.py --evaluate`
 
 ## Repo Structure
 
