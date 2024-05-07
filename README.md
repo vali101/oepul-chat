@@ -54,6 +54,11 @@ To use the system run `poetry run python main.py` with one of the following argu
 
 ## Repo Structure
 
-### oepul_chat 
+This repository primarily consists of the oepul_chat folder, housing two submodules:
 
-The main functionality of this repo is in the oepul_chat folder
+* index_build: Contains code for constructing various indices.
+* readers: Encompasses different readers for handling data.
+
+Additionally, there are smaller modules dedicated to evaluating the RAG system and utilities for file loading.
+
+Upon executing `--download`, a new folder named data will be generated. Subsequently, when building an index, it will be stored within the indices folder.
