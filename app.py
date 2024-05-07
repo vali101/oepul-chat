@@ -57,7 +57,7 @@ def main():
         create_normal_index(only_oepul=True, only_oepul_base_reader=True)
 
     if args.chat:
-        rag_chat(service_context=service_context)
+        rag_chat()
 
     if args.evaluate_retriever:
         if args.combinations:

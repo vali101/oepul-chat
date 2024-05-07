@@ -15,6 +15,7 @@ from langchain_openai import ChatOpenAI
 completion_prompt = PromptTemplate(
     "Du bist ein Supportsystem für Landwirte in Österreich und bekommst Informationen zum Österreichischen Programm für umweltgerechte Landwirtschaft kurz OEPUL.\n"
     "Anhand dieser Informationen sollst du Landirten helfen Entscheidungen zu treffen so dass sie Förderungen aus dem ÖPUL Programm bekommen.\n"
+    "Antworte immer auf Deutsch.\n"
     "Hier die Informationen zu den ÖPUL Förderungen:\n"
     "---------------------\n"
     "{context_str}\n"
@@ -30,6 +31,7 @@ chat_prompt = PromptTemplate(
     "Anhand dieser Informationen sollst du Landirten helfen Entscheidungen zu treffen so dass sie Förderungen aus dem ÖPUL Programm bekommen.\n"
     Du bekommst eine Unterhaltung (zwischen Mensch und Assistent) und eine weitere Nachfrag, 
     Anhand des Kontextes formuliere eigenständig eine Frage die das Informationsbedürfniss des Nutzer besser beschreibt.
+    Antworte immer auf Deutsch.
 
 <Gesprächs Historie>
 {chat_history}
@@ -70,7 +72,7 @@ def rag_query(query_str: str, index_path: str, k=8):
     return resp
 
 
-def rag_chat(service_context, index_path: str = "indices/normal_index/"):
+def rag_chat(index_path: str = "indices/normal_index/"):
 
     print('Loading index from storage...')
 
@@ -85,7 +87,6 @@ def rag_chat(service_context, index_path: str = "indices/normal_index/"):
         verbose=True,
         chat_prompt=chat_prompt,
         context_prompt=completion_prompt,
-        service_context=service_context,
         similarity_top_k=8,
         custom_chat_history=custom_chat_history)
 
