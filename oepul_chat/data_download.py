@@ -4,14 +4,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 
-
-# Manual other links:
-# manual_links = [
-#     "https://www.ama.at/getattachment/4d988952-847f-4847-a650-cf2e866d2ebe/20230131_Merkblatt_MFA2023_V3.pdf",
-#     "https://www.ama.at/getattachment/abb20701-bbad-46cc-a5ef-deb2ab03ebc6/Merkblatt_Flaechenmonitoring_2023.pdf",
-#     "https://www.ama.at/getattachment/05e60ad0-cbcb-40d3-820d-315e7fb49979/Nutzungsarten_Codes_Varianten_2023_V4.pdf"]
-
-
 def download_data(data_export_path: str = "data/"):
     """
     Downloads data from OEPUL and Bio Austria websites.

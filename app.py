@@ -1,15 +1,13 @@
-import argparse
-import logging
-from dotenv import load_dotenv
-from langchain_openai import OpenAI
-from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever, summary_query, generate_responses, evaluate_responses
+
 import warnings
+import logging
+import argparse
+from oepul_chat import download_data, create_summary_index, create_normal_index, rag_query, rag_chat, evaluate_retriever, summary_query, generate_responses, evaluate_responses
+from dotenv import load_dotenv
+
+
 warnings.filterwarnings("ignore")
-
-# Get api key from .env file
 load_dotenv()
-
-# set_global_service_context(service_context)
 
 
 def main():
@@ -20,12 +18,12 @@ def main():
     parser.add_argument("--build-normal-index", action="store_true", help="Create normal index")
     parser.add_argument("--build-oepul-base-reader-index", action="store_true",
                         help="Create only OEPUL base reader index")
+    parser.add_argument("--build-indices", action="store_true", help="Create all indices")
     parser.add_argument("--evaluate_retriever", action="store_true", help="Evaluate retriever")
-    parser.add_argument("--generate_responses", action="store_true", help="Evaluate response")
+    parser.add_argument("--generate_responses", action="store_true", help="Generate response")
     parser.add_argument("--evaluate_responses", action="store_true", help="Evaluate response")
     parser.add_argument("--combinations", action="store_true",
                         help="Evaluate chatbot with different combinations")
-    parser.add_argument("--build-indices", action="store_true", help="Create all indices: ")
     parser.add_argument("--query", type=str, help="Query chatbot")
     parser.add_argument("--summary-query", type=str, help="Query summaries.")
     parser.add_argument("--chat", action="store_true", help="Chat with chatbot")

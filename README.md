@@ -62,3 +62,5 @@ This repository primarily consists of the oepul_chat folder, housing two submodu
 Additionally, there are smaller modules dedicated to evaluating the RAG system and utilities for file loading.
 
 Upon executing `--download`, a new folder named data will be generated. Subsequently, when building an index, it will be stored within the indices folder.
+
+The Jupyter Notebooks in the notebooks should only server for understanding of some concepts and ideas used in the final library.
